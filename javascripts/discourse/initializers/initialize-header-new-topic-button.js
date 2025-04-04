@@ -8,7 +8,6 @@ export default apiInitializer((api) => {
     const newTopicBtn = document.getElementById("new-topic-button");
     const sidebar = document.getElementById("d-sidebar");
     if (newTopicBtn && sidebar) {
-      console.log("Found");
       sidebar.insertBefore(newTopicBtn, sidebar.firstChild);
     }
   });
