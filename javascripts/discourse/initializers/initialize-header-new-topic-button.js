@@ -3,10 +3,13 @@ import CustomHeaderTopicButton from "../components/custom-header-topic-button";
 
 export default apiInitializer((api) => {
   api.renderInOutlet("below-site-header", CustomHeaderTopicButton);
-  const newTopicBtn = document.getElementById("new-topic-button");
-  const sidebar = document.getElementById("d-sidebar");
-  if (newTopicBtn && sidebar) {
-    console.log("Found");
-    sidebar.insertBefore(newTopicBtn, sidebar.firstChild);
-  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const newTopicBtn = document.getElementById("new-topic-button");
+    const sidebar = document.getElementById("d-sidebar");
+    if (newTopicBtn && sidebar) {
+      console.log("Found");
+      sidebar.insertBefore(newTopicBtn, sidebar.firstChild);
+    }
+  });
 });
