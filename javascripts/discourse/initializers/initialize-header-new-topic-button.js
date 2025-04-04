@@ -1,7 +1,7 @@
 import { apiInitializer } from "discourse/lib/api";
 import CustomHeaderTopicButton from "../components/custom-header-topic-button";
 
-export default apiInitializer("1.15.0", (api) => {
+export default apiInitializer((api) => {
   api.renderInOutlet("below-site-header", CustomHeaderTopicButton);
   const newTopicBtn = document.getElementById("new-topic-button");
   const sidebar = document.getElementById("d-sidebar");
